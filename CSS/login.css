@@ -1,0 +1,65 @@
+body {
+    background-color: #a6adb55e;
+}
+
+.container {
+    margin-top: 42px;
+    background-color: white;
+    height: 48vh;
+    width: 30vw;
+    margin-left: 34vw;
+    text-align: center;
+    padding-top: 46px;
+    
+
+    background: transparent;
+    box-shadow: 8px 12px 48px #c4bbff;
+    border: 2px solid white;
+    border-radius: 11px;
+}
+
+/* form{
+    width: 12wh;
+} */
+#username {
+    width: 204px;
+    height: 27px;
+    padding: 3px;
+    font-size: 20px;
+    margin-top: 37px;
+    border: 2px solid whitesmoke;
+    padding: 7px;
+    background: cornsilk;
+    border-radius: 6px;
+}
+
+#password {
+    width: 204px;
+    height: 27px;
+    padding: 3px;
+    font-size: 20px;
+    margin-top: 17px;
+    border: 2px solid whitesmoke;
+    padding: 7px;
+    background: cornsilk;
+    border-radius: 6px;
+}
+
+button {
+    height: 50px;
+    width: 133px;
+    font-size: 29px;
+    border: 3px solid whitesmoke;
+    margin-top: 25px;
+    border-radius: 14px;
+    background-color: #b06bf0;
+
+}
+
+.create {
+    margin-top: 30px;
+    font-size: 21px;
+}
+small a{
+    text-decoration: none;
+}
