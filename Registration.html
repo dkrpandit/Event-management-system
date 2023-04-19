@@ -31,31 +31,31 @@
   </header>
 
   <div class="container">
-    <form class=""  id="contact_form">
+    <form class="" action="connect.php" method="post" id="contact_form">
       <legend>
         <h2><b>Registration Form</b></h2>
       </legend><br>
         <label class="first-name">First Name</label>
-          <input name="first_name" placeholder="First Name" class="form-control" type="text"><br>
+          <input name="first_name" placeholder="First Name" class="form-control" type="text" name="FirstName"><br>
         <label class="last_name1">Last Name</label>
-          <input name="last_name2" placeholder="Last Name" class="form-control" type="text"><br>     
+          <input name="last_name2" placeholder="Last Name" class="form-control" type="text" name="LastName"><br>     
         <label class="branch">select your branch</label>
-          <select name="Branch">
-            <option>IT</option>
-            <option>CS</option>
-            <option>E&TC</option>
+          <select name="Branch" >
+            <option name="Branch" value="IT">IT</option>
+            <option name="Branch" value="CS">CS</option>
+            <option name="Branch" value="E&TC">E&TC</option>
           </select>
           <br>
         <label class="username1">Username</label>
-          <input name="username2" placeholder="Username" class="form-control" type="text"><br>
+          <input name="username2" placeholder="Username" class="form-control" type="text" name="Username"><br>
         <label class="password1">Password</label>
-          <input name="user_password" placeholder="Password" class="form-control" type="password"><br>
+          <input name="user_password" placeholder="Password" class="form-control" type="password"  name="Password"><br>
         <label class="col-md-4 control-label">Confirm Password</label>
           <input name="confirm_password" placeholder="Confirm Password" class="form-control" type="password"><br>
         <label class="col-md-4 control-label">E-Mail</label>
-          <input name="email" placeholder="E-Mail Address" class="form-control" type="text"><br>
+          <input name="email" placeholder="E-Mail Address" class="form-control" type="text" name="email"><br>
         <label class="col-md-4 control-label">Contact No.</label>
-          <input name="contact_no" placeholder="+91" class="form-control" type="text"><br>
+          <input name="contact_no" placeholder="+91" class="form-control" type="text" name="contactNo"><br>
           <button type="submit" class="btn btn-warning">SUBMIT </button>
     </form>
   </div>
