@@ -45,5 +45,21 @@
 
   display: flex;
   position: absolute;
-  margin-left: 19vw;
+  margin-left: 292px;
+}
+
+
+.cultural{
+  background-color: burlywood;
+  height: 15vh;
+  width: 100vw;
+  margin-top: 34px;
+  text-align: center;
+}
+.sports{
+  background-color: red;
+  height: 15vh;
+  width: 100vw;
+  text-align: center;
+  margin-top: 50px;
 }
