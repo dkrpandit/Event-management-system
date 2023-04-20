@@ -27,6 +27,8 @@
 // $insert = false;
 // if(isset($_POST['name'])){
     // Set connection variables
+
+    
     $server = "localhost";
     $username = "pandit";
     $password = "DharmP1234$";
@@ -38,7 +40,7 @@
     if(!$con){
         die("connection to this database failed due to" . mysqli_connect_error());
     }
-    echo "Success connecting to the db";
+    // echo "Success connecting to the db";
         $Username = $_POST['Username'];
         $FirstName = $_POST['FirstName'];
         $LastName = $_POST['LastName'];
@@ -49,7 +51,12 @@
 
 
 
+
+
    $sql=  "INSERT INTO `pbl`.`Registration` (`Username`, `FirstName`, `LastName`, `Branch`, `Password`, `email`, `contactNo`) VALUES ('$Username', '$FirstName', '$LastName', '$Branch', '$Password', '$email', '$contactNo',current_timestamp())";
+
+
+
 
 //    echo $sql;
         if($con->query($sql) == true){
@@ -64,6 +71,9 @@
     
         // Close the database connection
         $con->close();
+
+
+
 
 
 //     // Collect post variables
@@ -94,4 +104,5 @@
 //     $con->close();
 // }
 // ?>
+
 ?>
