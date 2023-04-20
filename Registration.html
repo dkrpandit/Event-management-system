@@ -33,34 +33,60 @@
   </header>
 
   <div class="container">
-    <form  action="connect.php" method="post" id="contact_form">
+    <form action="connect.php" method="post" id="contact_form">
       <legend>
         <h2><b>Registration Form</b></h2>
       </legend><br>
-      <label class="usernameL">Username</label>
-          <input placeholder="Username" class="usernamei" type="text" name="Username"><br>
-        <label class="first-nameL">First Name</label>
-          <input placeholder="First Name" class="form-control" type="text" name="FirstName"><br>
+
+      <div class="username6">
+        <label class="usernameL">Username</label>
+        <input placeholder="Username" class="usernamei" type="text" name="Username">
+      </div><br>
+
+      <div class="username3">
+        <label class="firstNameL">First Name</label>
+        <input placeholder="First Name" class="FirstNamei" type="text" name="FirstName">
+      </div><br>
+      <div class="lastName3">
         <label class="last_nameL">Last Name</label>
-          <input placeholder="Last Name" class="form-control" type="text" name="LastName"><br>     
+        <input placeholder="Last Name" class="form-control" type="text" name="LastName">
+      </div><br>
+
+      <div class="branch3">
         <label class="branchL">select your branch</label>
-          <select name="Branch" >
-            <option>IT</option>
-            <option>CS</option>
-            <option>E&TC</option>
-          </select>
-          <br>
+        <select name="Branch">
+          <option>IT</option>
+          <option>CS</option>
+          <option>E&TC</option>
+        </select>
+      </div><br>
+      <div class="password3">
         <label class="passwordL">Password</label>
-          <input placeholder="Password" class="form-control" type="password"  name="Password"><br>
+        <input placeholder="Password" class="form-control" type="password" name="Password">
+      </div><br>
+
+      <div class="conformPassword3">
         <label class="confirm_passwordL">Confirm Password</label>
-          <input name="confirm_password" placeholder="Confirm Password" class="form-control" type="password"><br>
+        <input name="confirm_password" placeholder="Confirm Password" class="form-control" type="password">
+      </div><br>
+
+      <div class="email3">
         <label class="emailL">E-Mail</label>
-          <input placeholder="E-Mail Address" class="form-control" type="text" name="email"><br>
+        <input placeholder="E-Mail Address" class="form-control" type="text" name="email">
+      </div><br>
+
+      <div class="contactNo3">
         <label class="contactL">Contact No.</label>
-          <input placeholder="+91" class="form-control" type="text" name="contactNo"><br>
-          <button type="submit">SUBMIT </button>
-          <!-- <input type="submit" class="submit1"> -->
+        <input placeholder="+91" class="form-control" type="text" name="contactNo">
+      </div><br>
+
+      <div class="button3">
+        <button class="submitb" type="submit">SUBMIT </button>
+      </div>
+
+      <!-- <input type="submit" class="submit1"> -->
     </form>
   </div>
 </body>
+
 </html>
