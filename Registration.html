@@ -31,32 +31,33 @@
   </header>
 
   <div class="container">
-    <form class="" action="connect.php" method="post" id="contact_form">
+    <form  action="connect.php" method="post" id="contact_form">
       <legend>
         <h2><b>Registration Form</b></h2>
       </legend><br>
-        <label class="first-name">First Name</label>
-          <input name="first_name" placeholder="First Name" class="form-control" type="text" name="FirstName"><br>
-        <label class="last_name1">Last Name</label>
-          <input name="last_name2" placeholder="Last Name" class="form-control" type="text" name="LastName"><br>     
-        <label class="branch">select your branch</label>
+      <label class="usernameL">Username</label>
+          <input placeholder="Username" class="usernamei" type="text" name="Username"><br>
+        <label class="first-nameL">First Name</label>
+          <input placeholder="First Name" class="form-control" type="text" name="FirstName"><br>
+        <label class="last_nameL">Last Name</label>
+          <input placeholder="Last Name" class="form-control" type="text" name="LastName"><br>     
+        <label class="branchL">select your branch</label>
           <select name="Branch" >
-            <option name="Branch" value="IT">IT</option>
-            <option name="Branch" value="CS">CS</option>
-            <option name="Branch" value="E&TC">E&TC</option>
+            <option>IT</option>
+            <option>CS</option>
+            <option>E&TC</option>
           </select>
           <br>
-        <label class="username1">Username</label>
-          <input name="username2" placeholder="Username" class="form-control" type="text" name="Username"><br>
-        <label class="password1">Password</label>
-          <input name="user_password" placeholder="Password" class="form-control" type="password"  name="Password"><br>
-        <label class="col-md-4 control-label">Confirm Password</label>
+        <label class="passwordL">Password</label>
+          <input placeholder="Password" class="form-control" type="password"  name="Password"><br>
+        <label class="confirm_passwordL">Confirm Password</label>
           <input name="confirm_password" placeholder="Confirm Password" class="form-control" type="password"><br>
-        <label class="col-md-4 control-label">E-Mail</label>
-          <input name="email" placeholder="E-Mail Address" class="form-control" type="text" name="email"><br>
-        <label class="col-md-4 control-label">Contact No.</label>
-          <input name="contact_no" placeholder="+91" class="form-control" type="text" name="contactNo"><br>
-          <button type="submit" class="btn btn-warning">SUBMIT </button>
+        <label class="emailL">E-Mail</label>
+          <input placeholder="E-Mail Address" class="form-control" type="text" name="email"><br>
+        <label class="contactL">Contact No.</label>
+          <input placeholder="+91" class="form-control" type="text" name="contactNo"><br>
+          <button type="submit">SUBMIT </button>
+          <!-- <input type="submit" class="submit1"> -->
     </form>
   </div>
 </body>
