@@ -36,7 +36,7 @@
 .login {
   display: flex;
   position: absolute;
-  margin-left: 60vw;
+  margin-left: 980px;
 }
 .navbar li a:hover{
      color: salmon;
