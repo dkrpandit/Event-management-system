@@ -34,8 +34,8 @@
 }
 
 .login {
-  display: flex;
-  position: absolute;
+  /* display: flex; */
+  /* position: absolute; */
   margin-left: 980px;
 }
 .navbar li a:hover{
@@ -43,7 +43,7 @@
 }
 .nav1 {
 
-  display: flex;
+  /* display: flex; */
   position: absolute;
   margin-left: 316px;
 }
