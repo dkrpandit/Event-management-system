@@ -12,13 +12,6 @@
   margin-left: 61px;
 }
 
-/* .nav-a {
-  text-decoration: none;
-  padding: 3px 3px;
-  color: aliceblue;
-  font-size: 23px;
-  font-weight: bold;
-} */
 .navbar li a {
   text-decoration: none;
   padding: 3px 3px;
@@ -34,8 +27,8 @@
 }
 
 .login {
-  /* display: flex; */
-  /* position: absolute; */
+  display: flex;
+  position: absolute;
   margin-left: 980px;
 }
 .navbar li a:hover{
@@ -43,7 +36,7 @@
 }
 .nav1 {
 
-  /* display: flex; */
+  display: flex;
   position: absolute;
   margin-left: 316px;
 }
