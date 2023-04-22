@@ -8,11 +8,10 @@
   <title>Registration</title>
   <link rel="stylesheet" href="CSS/home.css">
   <link rel="stylesheet" href="CSS/Registration.css">
+  <script src="JavaScript/Registration.js"></script>
 </head>
 
 <body>
-  <!-- <?php include('connect.php') ?> -->
-
   <header>
     <nav class="navbar">
       <ul>
@@ -32,7 +31,7 @@
     </nav>
   </header>
 
-  <div class="container">
+  <!-- <div class="container">
     <form action="connect.php" method="post" id="contact_form">
       <legend>
         <h2><b>Registration Form</b></h2>
@@ -71,7 +70,7 @@
       </div><br>
       <div class="password3">
         <label class="passwordL">Password</label>
-        <input placeholder="Password" class="form-control" type="password" name="Password">
+        <input placeholder="Password" class="form-control" type="password" name="Password2">
       </div><br>
 
       <div class="conformPassword3">
@@ -92,8 +91,73 @@
       <div class="button3">
         <button class="submitb" type="submit">SUBMIT </button>
       </div>
+    </form>
+  </div> -->
+
+  <div class="container">
+    <form action="connect.php" method="post" id="contact_form" onsubmit="return validateForm()">
+      <legend>
+        <h2><b>Registration Form</b></h2>
+      </legend><br>
+  
+      <div class="username6">
+        <label class="usernameL">Username</label>
+        <input placeholder="Username" class="usernamei" type="text" name="Username" id="username">
+      </div><br>
+  
+      <div class="username3">
+        <label class="firstNameL">First Name</label>
+        <input placeholder="First Name" class="FirstNamei" type="text" name="FirstName" id="firstName">
+      </div><br>
+      <div class="lastName3">
+        <label class="last_nameL">Last Name</label>
+        <input placeholder="Last Name" class="form-control" type="text" name="LastName" id="lastName">
+      </div><br>
+  
+      <div class="branch3">
+        <label class="branchL">select your branch</label>
+        <select name="Branch" id="branch">
+          <option value="">--Please select--</option>
+          <option value="IT">IT</option>
+          <option value="CS">CS</option>
+          <option value="E&TC">E&TC</option>
+        </select>
+      </div><br>
+      <div class="year3">
+        <label class="yearL">which year</label>
+        <select name="year" id="year">
+          <option value="">--Please select--</option>
+          <option value="1st">1st</option>
+          <option value="2nd">2nd</option>
+          <option value="3rd">3rd</option>
+          <option value="4th">4th</option>
+        </select>
+      </div><br>
+      <div class="password3">
+        <label class="passwordL">Password</label>
+        <input placeholder="Password" class="form-control" type="password" name="Password2" id="password">
+      </div><br>
+  
+      <div class="conformPassword3">
+        <label class="confirm_passwordL">Confirm Password</label>
+        <input name="confirm_password" placeholder="Confirm Password" class="form-control" type="password" id="confirmPassword">
+      </div><br>
+  
+      <div class="email3">
+        <label class="emailL">E-Mail</label>
+        <input placeholder="E-Mail Address" class="form-control" type="text" name="email" id="email">
+      </div><br>
+  
+      <div class="contactNo3">
+        <label class="contactL">Contact No.</label>
+        <input placeholder="+91" class="form-control" type="text" name="contactNo" id="contactNo">
+      </div><br>
+  
+      <div class="button3">
+        <button class="submitb" type="submit">SUBMIT </button>
+      </div>
+    </form>
   </div>
-  <script src="JavaScript/Registration.js"></script>
 </body>
 
 </html>

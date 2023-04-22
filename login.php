@@ -1,4 +1,9 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Retrieve database credentials
 $server = "localhost";
 $username = "pandit";
 $password = "DharmP1234$";
@@ -12,36 +17,33 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if the form was submitted
+// Check if form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve username and password from login form
+    $user = $_POST['Username'];
+    $pass = $_POST['Password2'];
 
-    // Get the username and password from the form
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-
-    // Prepare and execute the query to check if the user exists
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-    $stmt->bind_param("s", $username);
+    // Prepare SQL statement to check if username and password are correct
+    $stmt = $conn->prepare("SELECT * FROM Registration WHERE Username = ? AND Password2 = ?");
+    $stmt->bind_param("ss", $user, $pass);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Check if the user exists
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-
-        // Verify the password
-        if (password_verify($password, $row["password"])) {
-            // Start the session and set the user as logged in
-            session_start();
-            $_SESSION["username"] = $username;
-            header("Location: dashboard.php");
-        } else {
-            // Invalid password
-            $error = "Invalid password";
-        }
+    // If user exists and password is correct, log them in
+    if ($result->num_rows == 1) {
+        // Start session and set user ID
+        session_start();
+        // $row = $result->fetch_assoc();
+        // $_SESSION['user_id'] = $row['id'];
+        // Redirect to home page
+        header('Location: home.html');
     } else {
-        // User does not exist
-        $error = "User does not exist";
+        // Invalid username or password
+        echo "Invalid username or password";
     }
+
+    $stmt->close();
 }
+
+$conn->close();
 ?>
