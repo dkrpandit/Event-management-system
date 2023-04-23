@@ -25,8 +25,6 @@ $contactNo = $_POST['contactNo'];
 $sql =  "INSERT INTO `pbl`.`Registration` (`Username`, `FirstName`, `LastName`, `Branch`,`year`, `Password2`, `email`, `contactNo`,`DateTime`) VALUES ('$Username', '$FirstName', '$LastName', '$Branch','$year', '$Password2', '$email', '$contactNo',current_timestamp())";
 
 // echo $sql;
-
-
 if ($con->query($sql) == true) {
    // echo "Successfully inserted";
 
