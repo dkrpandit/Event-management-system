@@ -1,0 +1,33 @@
+.today{
+    background-color: #f2f2f2;
+    height: 243px;
+    max-width: 502px;
+    text-align: center;
+    margin-left: 31%;
+    margin-top: 13px;
+    border: 2px solid greenyellow;
+    border-radius: 19px;
+}
+.upcoming{
+    background-color: #f2f2f2;
+    height: 243px;
+    max-width: 502px;
+    text-align: center;
+    margin-left: 31%;
+    margin-top: 13px;
+    border: 2px solid rgb(197, 170, 14);
+    border-radius: 19px;
+}
+.recent{
+    background-color: #f2f2f2;
+    height: 243px;
+    max-width: 502px;
+    text-align: center;
+    margin-left: 31%;
+    margin-top: 13px;
+    border: 2px solid red;
+    border-radius: 19px;
+}
+.today12{
+    border-bottom: 5px solid greenyellow;
+}

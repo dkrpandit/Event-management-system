@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@
 
 .navbar ul {
   overflow: auto;
-  margin-left: 61px;
+  margin-left: 1%;
 }
 
 .navbar li a {
@@ -29,30 +30,51 @@
 .login {
   display: flex;
   position: absolute;
-  margin-left: 980px;
+  margin-left: 66%;
 }
-.navbar li a:hover{
-     color: salmon;
-}
-.nav1 {
 
+.nav1 {
   display: flex;
   position: absolute;
-  margin-left: 316px;
+  margin-left: 21%;
+}
+
+.head12{
+  display: flex;
+  margin-left: 11%;
+}
+
+/* Media queries for mobile devices */
+@media only screen and (max-width: 600px) {
+  .navbar li {
+    float: none;
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .login {
+    position: static;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  
+  .nav1 {
+    position: static;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  
+  .navbar li a {
+    font-size: 18px;
+    padding: 5px 5px;
+  }
 }
 
 
-.cultural{
-  background-color: burlywood;
-  height: 15vh;
-  width: 100vw;
-  margin-top: 34px;
-  text-align: center;
-}
-.sports{
-  background-color: red;
-  height: 15vh;
-  width: 100vw;
-  text-align: center;
-  margin-top: 50px;
+.sports1{
+  display: flex;
+  position: absolute;
+  margin-top: 30%;
+  margin-left: 40%;
+  text-decoration: none;
 }

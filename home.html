@@ -7,8 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event management system</title>
     <link rel="stylesheet" href="CSS/home.css">
+    <style>
+        /* ----------------------------- For sports ----------------------- */
+        .slider-container {
+            max-width: 800px;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .slider-image {
+            width: 43%;
+            height: 52%;
+            position: absolute;
+            top: 28%;
+            left: 25%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slider-image.active {
+            opacity: 1;
+        }
+
+        .slider-navigation {
+            position: absolute;
+            left: 47%;
+            bottom: 21%;
+            top: 76%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .slider-navigation button {
+            background-color: #fff;
+            border: none;
+            padding: 5px 10px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .slider-navigation button.active {
+            background-color: #ccc;
+        }
+        button{
+            border-radius: 14px;
+        }
+    </style>
 </head>
+
 <body>
+    <a href="https://www.isquareit.edu.in/" target="_blank"> <img class="head12" src="images/i2it.png" alt=""></a>
     <header>
         <nav class="navbar">
             <ul>
@@ -27,12 +77,46 @@
             </ul>
         </nav>
     </header>
-    <div class="cultural">
-<a href="Cultural.html"><h1>Cultural events</h1></a>
-    </div>
     <div class="sports">
-        <h1>sports events</h1>
+        <img class="slider-image active" src="images/Sports/5-copy.jpg" alt="Image 1">
+        <img class="slider-image" src="images/Sports/7-copy.jpg" alt="Image 2">
+        <img class="slider-image" src="images/Sports/sports.jpg" alt="Image 3">
+        <img class="slider-image" src="images/Sports/Sports.png" alt="Image 4">
+        <div class="slider-navigation">
+            <button class="active" onclick="showImage(1)">1</button>
+            <button onclick="showImage(2)">2</button>
+            <button onclick="showImage(3)">3</button>
+            <button onclick="showImage(4)">4</button>
+        </div>
     </div>
+        <a class="sports1" href="sports.html" class="sports1">
+            <h1>Sport Events</h1>
+        </a>
+    <!-- <div class="cultural">
+        <a href="#">
+            <h1>Cultural Events</h1>
+        </a>
+    </div> -->
+
+    <script>
+        //----------------------------- For sports -----------------------
+		let currentImage = 1;
+		const showImage = (imageNumber) => {
+			document.querySelector('.slider-image.active').classList.remove('active');
+			document.querySelector(`.slider-image:nth-child(${imageNumber})`).classList.add('active');
+			document.querySelector('.slider-navigation button.active').classList.remove('active');
+			document.querySelector(`.slider-navigation button:nth-child(${imageNumber})`).classList.add('active');
+			currentImage = imageNumber;
+		}
+		setInterval(() => {
+			currentImage++;
+			if (currentImage > 4) {
+				currentImage = 1;
+			}
+			showImage(currentImage);
+		}, 5000);
+	</script>
+
 </body>
 
 </html>
