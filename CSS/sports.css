@@ -3,7 +3,7 @@
     height: 243px;
     max-width: 502px;
     text-align: center;
-    margin-left: 31%;
+    /* margin-left: 31%; */
     margin-top: 13px;
     border: 2px solid greenyellow;
     border-radius: 19px;
@@ -13,8 +13,10 @@
     height: 243px;
     max-width: 502px;
     text-align: center;
-    margin-left: 31%;
-    margin-top: 13px;
+    /* margin-left: 31%; */
+    margin-left: 34%;
+    /* margin-top: 13px; */
+    margin-top: -245px;
     border: 2px solid rgb(197, 170, 14);
     border-radius: 19px;
 }
@@ -25,9 +27,18 @@
     text-align: center;
     margin-left: 31%;
     margin-top: 13px;
+    margin-left: 68%;
+    margin-top: -249px;
     border: 2px solid red;
     border-radius: 19px;
 }
 .today21{
     border-bottom: 5px solid greenyellow;
+}
+.upcoming21{
+    border-bottom: 5px solid rgb(197, 170, 14);;
+}
+.recent21{
+    border-bottom: 5px solid red;
+    
 }
