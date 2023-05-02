@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="timer">
+    <div class="timer-part">
+      <span id="months">04</span> Months
+    </div>
+    <div class="timer-part">
+      <span id="days">10</span> Days
+    </div>
+    <div class="timer-part">
+      <span id="hours">12</span> Hours
+    </div>
+    <div class="timer-part">
+      <span id="minutes">02</span> Minutes
+    </div>
+    <div class="timer-part">
+      <span id="seconds">40</span> Seconds
+    </div>
+  </div>
+  
+  <script>
+    var targetDate = new Date("2023-12-31T23:59:59");
+    var timer;
+  
+    function startTimer() {
+      timer = setInterval(function() {
+        var now = new Date();
+        var timeDiff = targetDate.getTime() - now.getTime();
+  
+        if (timeDiff <= 0) {
+          clearInterval(timer);
+          return;
+        }
+  
+        var seconds = Math.floor((timeDiff / 1000) % 60);
+        var minutes = Math.floor((timeDiff / 1000 / 60) % 60);
+        var hours = Math.floor((timeDiff / 1000 / 60 / 60) % 24);
+        var days = Math.floor(timeDiff / 1000 / 60 / 60 / 24);
+        var months = Math.floor(days / 30); // Approximate months
+  
+        document.getElementById("months").innerHTML = months < 10 ? "0" + months : months;
+        document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+        document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+        document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+        document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+      }, 1000);
+    }
+  
+    function stopTimer() {
+      clearInterval(timer);
+    }
+  
+    function resetTimer() {
+      clearInterval(timer);
+      document.getElementById("months").innerHTML = "00";
+      document.getElementById("days").innerHTML = "00";
+      document.getElementById("hours").innerHTML = "00";
+      document.getElementById("minutes").innerHTML = "00";
+      document.getElementById("seconds").innerHTML = "00";
+    }
+  </script>
+  
+  <style>
+    .timer-part {
+      display: inline-block;
+      margin-right: 5px;
+      font-size: 24px;
+    }
+  
+    .timer-part span {
+      display: inline-block;
+      padding: 5px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+    }
+  </style>
+  
+</body>
+</html>
