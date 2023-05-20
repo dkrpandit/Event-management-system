@@ -5,7 +5,6 @@
     height: 502px;
     max-width: 502px;
     text-align: center;
-    /* margin-left: 31%; */
     margin-top: 13px;
     border: 2px solid greenyellow;
     border-radius: 19px;
@@ -15,10 +14,7 @@
     background-color: #f2f2f2;
     height: 502px;
     max-width: 502px;
-    /* text-align: center; */
-    /* margin-left: 31%; */
     margin-left: 34%;
-    /* margin-top: 13px; */
     margin-top: -504px;
     border: 2px solid rgb(197, 170, 14);
     border-radius: 19px;
@@ -53,48 +49,16 @@
     padding: 11px;
 
 }
-
-.upcoming ul li a {
-    font-family: 'Alkatra', cursive;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Mukta', sans-serif;
-    text-decoration: none;
-    font-size: 21px;
-    /* ----------- */
-    transform: translateY(100%); /* initially move all items outside the container */
-  transition: transform 0.3s ease-in-out; /* add a transition effect */
-}
-/* --------------------------- */
-.upcoming ul {
-    margin-top: 12px;
-    max-height: 400px; /* set the maximum height of the container */
-  overflow-y: scroll; /* add a scrollbar when the content overflows */
-  scroll-behavior: smooth; /* add smooth scrolling effect */
-}
-.upcoming ul::-webkit-scrollbar { /* style the scrollbar */
-    width: 6px;
+/* ----------------------------------------------------------------------- */
+ol {
+  list-style-type: none;
+  padding: 14px;
 }
 
-.upcoming ul::-webkit-scrollbar-track {
-    background: #f2f2f2;
-  }
 
-  .upcoming ul::-webkit-scrollbar-thumb {
-    background-color: rgb(197, 170, 14);
-    border-radius: 20px;
-  }
-  .upcoming ul li.show {
-    transform: translateY(0); /* move the item to the top of the container */
-    transition-delay: 0.2s; /* add a delay for the transition effect */
-  }
-  /* -------------------- */
-  
-.upcoming ul li {
-    list-style: disc;
-    margin-left: 19px;
-}
 
-/* -------------For clock---------------- */
+
+/* ------------- Date and Time ---------------- */
 
 .todayDateTime{
   text-align: center;
