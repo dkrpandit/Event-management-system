@@ -93,3 +93,19 @@
     list-style: disc;
     margin-left: 19px;
 }
+
+/* -------------For clock---------------- */
+
+.todayDateTime{
+  text-align: center;
+  height: 59px;
+  font-size: 32px;
+  color: green;
+  /* margin-left: 156px; */
+  padding: 3px;
+}
+.ddt{
+  /* margin-left: 87px; */
+  color: cadetblue;  
+  text-align: center;
+}
