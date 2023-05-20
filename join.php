@@ -36,21 +36,17 @@
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
-
         // Retrieve database credentials
         $server = "localhost";
         $username = "pandit";
         $password = "DharmP1234$";
         $dbname = "pbl";
-
         // Create connection
         $conn = new mysqli($server, $username, $password, $dbname);
-
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-
         // Check if form has been submitted
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Retrieve username and password from login form
@@ -67,13 +63,8 @@
             if ($result->num_rows == 1) {
                 // Start session and set user ID
                 session_start();
-                // $row = $result->fetch_assoc();
-                // $_SESSION['user_id'] = $row['id'];
-                // Redirect to home page
                 header('Location: home.html');
             } else {
-                // Invalid username or password
-                // echo "Invalid username or password";
                 echo '<div class="error">Invalid username or password</div>';
             }
 
@@ -83,12 +74,12 @@
         $conn->close();
         ?>
         <form action="Login.php" class="form1" method="post" id="form1">
-            <h1>Sign in as</h1>
+            <h1>Join as</h1>
             <input type="text" id="username" name="Username" placeholder="Username">
             <br>
             <input type="password" id="password" name="Password2" placeholder="Password">
             <br>
-            <button class="loginb" type="submit">Login</button>
+            <button class="loginb" type="submit">Join</button>
         </form>
         <div class="create">
             <small>New to I2IT ? <a href="Registration.php">create an account</a></small>

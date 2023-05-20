@@ -87,9 +87,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <li>
           <h1 class="nav1">Event management system</h1>
         </li>
-        <li>
+        <!-- <li>
           <a class="login" href="Login.php">Login</a>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </header>
