@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket</title>
+    <title>Basketball</title>
     <link rel="stylesheet" href="CSS/home.css">
     <link rel="stylesheet" href="CSS/login.css">
     <script src="JavaScript/login.js"></script>
@@ -23,7 +23,7 @@
                     <a href="About.html">About</a>
                 </li>
                 <li>
-                    <h1 class="nav1">Event management system</h1>
+                    <h1 class="nav1">Event management system</h1>`
                 </li>
                 <!-- <li>
                     <a class="login" href="Login.php">Login</a>
@@ -36,7 +36,7 @@
         if ($_SERVER["REQUEST_METHOD"] != "POST" || isset($_POST['Username']) && isset($_POST['Password2'])) {
             // Display the login form
             ?>
-            <form action="Cricket.php" class="form1" method="post" id="form1">
+            <form action="Basketball.php" class="form1" method="post" id="form1">
                 <h1>Join as</h1>
                 <input type="text" id="username" name="Username" placeholder="Username">
                 <br>
@@ -79,24 +79,24 @@
                     // Close the statement
                     $stmt->close();
                 
-                    // Check if the user is already joined in cricket events
-                    $checkStmt = $conn->prepare("SELECT * FROM Cricket WHERE Username = ?");
+                    // Check if the user is already joined in Basketball events
+                    $checkStmt = $conn->prepare("SELECT * FROM Basketball WHERE Username = ?");
                     $checkStmt->bind_param("s", $userData['Username']);
                     $checkStmt->execute();
                     $checkResult = $checkStmt->get_result();
                 
                     if ($checkResult->num_rows > 0) {
-                        echo '<div class="error">You have already joined the cricket events.</div>';
+                        echo '<div class="error">You have already joined the Basketball events.</div>';
                     } else {
-                        // Prepare the insert statement for the Cricket table
-                        $insertStmt = $conn->prepare("INSERT INTO `pbl`.`Cricket` (`Username`, `FirstName`, `LastName`, `Branch`, `Year`, `Password2`, `Email`, `ContactNo`, `DateTime`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())");
+                        // Prepare the insert statement for the Basketball table
+                        $insertStmt = $conn->prepare("INSERT INTO `pbl`.`Basketball` (`Username`, `FirstName`, `LastName`, `Branch`, `Year`, `Password2`, `Email`, `ContactNo`, `DateTime`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())");
                         $insertStmt->bind_param("ssssssss", $userData['Username'], $userData['FirstName'], $userData['LastName'], $userData['Branch'], $userData['year'], $userData['Password2'], $userData['email'], $userData['contactNo']);
                         $insertStmt->execute();
                 
                         // Close the insert statement
                         $insertStmt->close();
                 
-                        echo '<div class="success">You have joined the cricket events successfully.</div>';
+                        echo '<div class="success">You have joined the Basketball events successfully.</div>';
                     }
                 } else {
                     echo '<div class="error">Invalid username or password</div>';
