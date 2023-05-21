@@ -122,12 +122,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $stmt->close();
 
                     // Prepare the insert statement for the Cricket table
-                    $insertStmt = $conn->prepare("INSERT INTO `pbl`.`Cricket` (`Username`, `FirstName`, `LastName`, `Branch`, `Year`, `Password2`, `Email`, `ContactNo`,`DateTime`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())");
-                    $insertStmt->bind_param("ssssssss", $userData['Username'], $userData['FirstName'], $userData['LastName'], $userData['Branch'], $userData['year'], $userData['Password2'], $userData['email'], $userData['contactNo']);
-                    $insertStmt->execute();
+                    // $insertStmt = $conn->prepare("INSERT INTO `pbl`.`Cricket` (`Username`, `FirstName`, `LastName`, `Branch`, `Year`, `Password2`, `Email`, `ContactNo`,`DateTime`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())");
+                    // $insertStmt->bind_param("ssssssss", $userData['Username'], $userData['FirstName'], $userData['LastName'], $userData['Branch'], $userData['year'], $userData['Password2'], $userData['email'], $userData['contactNo']);
+                    // $insertStmt->execute();
 
                     // Close the insert statement
-                    $insertStmt->close();
+                    // $insertStmt->close();
 
                     echo '<div class="success">You have joined the cricket events successfully.</div>';
                 } 
