@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket</title>
+    <title>Basketball</title>
     <link rel="stylesheet" href="CSS/home.css">
     <link rel="stylesheet" href="CSS/login.css">
     <script src="JavaScript/login.js"></script>
@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_SERVER["REQUEST_METHOD"] != "POST" || isset($_POST['Username']) && isset($_POST['Password2'])) {
             // Display the login form
             ?>
-            <form action="Cricket.php" class="form1" method="post" id="form1">
+            <form action="Basketball.php" class="form1" method="post" id="form1">
                 <h1>Join as</h1>
                 <input type="text" id="username" name="Username" placeholder="Username">
                 <br>
