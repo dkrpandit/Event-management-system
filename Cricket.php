@@ -1,55 +1,3 @@
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-// Retrieve database credentials
-$server = "localhost";
-$username = "pandit";
-$password = "DharmP1234$";
-$dbname = "pbl";
-// Create connection
-$conn = new mysqli($server, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-// Check if form has been submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve username and password from login form
-    $user = $_POST['Username'];
-    $pass = $_POST['Password2'];
-
-    // Prepare SQL statement to check if username and password are correct
-    $stmt = $conn->prepare("SELECT * FROM Registration WHERE Username = ? AND Password2 = ?");
-    $stmt->bind_param("ss", $user, $pass);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    // If user exists and password is correct, log them in
-    if ($result->num_rows == 1) {
-        // Retrieve user data
-        $userData = $result->fetch_assoc();
-
-        // Close the statement
-        $stmt->close();
-
-        // Prepare the insert statement for the Cricket table
-        $insertStmt = $conn->prepare("INSERT INTO `pbl`.`Cricket` (`Username`, `FirstName`, `LastName`, `Branch`, `Year`, `Password2`, `Email`, `ContactNo`,`DateTime`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())");
-        $insertStmt->bind_param("ssssssss", $userData['Username'], $userData['FirstName'], $userData['LastName'], $userData['Branch'], $userData['year'], $userData['Password2'], $userData['email'], $userData['contactNo']);
-        $insertStmt->execute();
-
-        // Close the insert statement
-        $insertStmt->close();
-
-        // echo '<div class="success">You have joined the cricket events successfully.</div>';
-    } 
-    // else {
-    //     echo '<div class="error">Invalid username or password</div>';
-    // }
-}
-// $conn->close();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,6 +50,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php } ?>
         <div id="message">
             <?php
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
+            // Retrieve database credentials
+            $server = "localhost";
+            $username = "pandit";
+            $password = "DharmP1234$";
+            $dbname = "pbl";
+            // Create connection
+            $conn = new mysqli($server, $username, $password, $dbname);
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Retrieve username and password from login form
                 $user = $_POST['Username'];
@@ -117,27 +75,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($result->num_rows == 1) {
                     // Retrieve user data
                     $userData = $result->fetch_assoc();
-
+                
                     // Close the statement
                     $stmt->close();
-
-                    // Prepare the insert statement for the Cricket table
-                    // $insertStmt = $conn->prepare("INSERT INTO `pbl`.`Cricket` (`Username`, `FirstName`, `LastName`, `Branch`, `Year`, `Password2`, `Email`, `ContactNo`,`DateTime`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())");
-                    // $insertStmt->bind_param("ssssssss", $userData['Username'], $userData['FirstName'], $userData['LastName'], $userData['Branch'], $userData['year'], $userData['Password2'], $userData['email'], $userData['contactNo']);
-                    // $insertStmt->execute();
-
-                    // Close the insert statement
-                    // $insertStmt->close();
-
-                    echo '<div class="success">You have joined the cricket events successfully.</div>';
-                } 
-                else {
+                
+                    // Check if the user is already joined in cricket events
+                    $checkStmt = $conn->prepare("SELECT * FROM Cricket WHERE Username = ?");
+                    $checkStmt->bind_param("s", $userData['Username']);
+                    $checkStmt->execute();
+                    $checkResult = $checkStmt->get_result();
+                
+                    if ($checkResult->num_rows > 0) {
+                        echo '<div class="error">You have already joined the cricket events.</div>';
+                    } else {
+                        // Prepare the insert statement for the Cricket table
+                        $insertStmt = $conn->prepare("INSERT INTO `pbl`.`Cricket` (`Username`, `FirstName`, `LastName`, `Branch`, `Year`, `Password2`, `Email`, `ContactNo`, `DateTime`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())");
+                        $insertStmt->bind_param("ssssssss", $userData['Username'], $userData['FirstName'], $userData['LastName'], $userData['Branch'], $userData['year'], $userData['Password2'], $userData['email'], $userData['contactNo']);
+                        $insertStmt->execute();
+                
+                        // Close the insert statement
+                        $insertStmt->close();
+                
+                        echo '<div class="success">You have joined the cricket events successfully.</div>';
+                    }
+                } else {
                     echo '<div class="error">Invalid username or password</div>';
-                }
+                } 
             }
+             $conn->close();
             ?>
         </div>
     </div>
 </body>
 </html>
-
