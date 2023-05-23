@@ -2,33 +2,34 @@
 
 .today {
     background-color: #f2f2f2;
-    height: 502px;
+    height: 530px;
     max-width: 502px;
-    text-align: center;
-    margin-top: 13px;
+    /* text-align: center; */
+    /* margin-top: 13px; */
+    margin-top: 34px;
     border: 2px solid greenyellow;
     border-radius: 19px;
 }
 
 .upcoming {
     background-color: #f2f2f2;
-    height: 502px;
+    height: 530px;
     max-width: 502px;
     margin-left: 34%;
-    margin-top: -504px;
+    margin-top: -534px;
     border: 2px solid rgb(197, 170, 14);
     border-radius: 19px;
 }
 
 .recent {
     background-color: #f2f2f2;
-    height: 502px;
+    height: 530px;
     max-width: 502px;
-    text-align: center;
+    /* text-align: center; */
     margin-left: 31%;
     margin-top: 13px;
     margin-left: 68%;
-    margin-top: -507px;
+    margin-top: -535px;
     border: 2px solid red;
     border-radius: 19px;
 }
@@ -36,12 +37,13 @@
 .today21 {
     border-bottom: 5px solid greenyellow;
     padding: 11px;
+    text-align: center;
 }
 
 .upcoming21 {
     padding: 11px;
     border-bottom: 5px solid rgb(197, 170, 14);
-    text-align: center;
+    /* text-align: center; */
 }
 
 .recent21 {
@@ -54,8 +56,6 @@ ol {
   list-style-type: none;
   padding: 14px;
 }
-/* ------------------------------------------------------------------------------- */
-
 /*--------------------- CSS For upcoming events -------------------- */
 
 /* -----------------------for Cricket-------------------------------- */
@@ -86,7 +86,7 @@ ol {
   color: red;
   background-color: greenyellow;
 }
-/* ------------------For-------------------------- */
+/* ------------------For Basketball-------------------------- */
 .Bdate{
   background-color: rgb(21, 219, 31);
   height: 30px;
@@ -117,7 +117,45 @@ ol {
 .basketball{
   margin-top: 6px;
 }
+/* ---------------- Today Events ----------------- */
+.Volleyball_1{
+    margin-top: 5px;
+}
+.Tennis{
+ margin-top: 7px;
+}
+.Tennis1{
+ margin-top: 5px;
+}
 
+/* --------------------Recent Events --------------------- */
+.BadmDate{
+  background-color: rgb(177 75 37);
+height: 30px;
+width: 134px;
+font-size: 29px;
+border-radius: 10px;
+padding: 10px;
+margin-top: 12px;
+color: #f2f2f2;
+}
+
+.TugDate{
+  background-color: rgb(177 75 37);
+  height: 30px;
+  width: 134px;
+  font-size: 29px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 12px;
+  color: #f2f2f2;
+}
+.Badminton1{
+ margin-top: 5px;
+}
+.Tug1{
+  margin-top: 5px;
+}
 /* ------------- Date and Time ---------------- */
 
 .todayDateTime{
