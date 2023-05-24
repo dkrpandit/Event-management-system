@@ -9,20 +9,20 @@
     <link rel="stylesheet" href="CSS/home.css">
     <style>
         /* ----------------------------- For sports ----------------------- */
-        .slider-container {
+        /* .slider-container {
             max-width: 800px;
             position: relative;
             margin: 0 auto;
             overflow: hidden;
             height: 400px;
-        }
+        } */
 
         .slider-image {
             width: 43%;
             height: 52%;
             position: absolute;
             top: 28%;
-            left: 25%;
+            left: 6%;
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
@@ -33,7 +33,7 @@
 
         .slider-navigation {
             position: absolute;
-            left: 47%;
+            left: 28%;
             bottom: 21%;
             top: 76%;
             transform: translateX(-50%);
@@ -54,6 +54,67 @@
         button{
             border-radius: 14px;
         }
+        /* ----------------------------- For cultural ----------------------- */
+/* .cultural {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 400px;
+} */
+
+.cultural .slider-image {
+    width: 43%;
+    height: 52%;
+    position: absolute;
+    top: 28%;
+    left: 52%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.cultural .slider-image.active {
+    opacity: 1;
+}
+
+.cultural .slider-navigation {
+    position: absolute;
+    left: 74%;
+    bottom: 21%;
+    top: 76%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.cultural .slider-navigation button {
+    background-color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.cultural .slider-navigation button.active {
+    background-color: #ccc;
+}
+
+.cultural1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    margin-left: 47%;
+    text-decoration: none;
+}
+
+/* .cultural1 h1 {
+    color: #000;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 0;
+} */
+
+
     </style>
 </head>
 
@@ -93,11 +154,41 @@
         <a class="sports1" href="sports.html" class="sports1">
             <h1>Sport Events</h1>
         </a>
-    <!-- <div class="cultural">
-        <a href="#">
+        <div class="cultural">
+            <img class="slider-image active" src="images/Cultural/WhatsApp Image 2023-05-24 at 1.34.11 AM (1).jpeg" alt="Image 1">
+            <img class="slider-image" src="images/Cultural/WhatsApp Image 2023-05-24 at 1.34.11 AM (2).jpeg" alt="Image 2">
+            <img class="slider-image" src="images/Cultural/WhatsApp Image 2023-05-24 at 1.34.11 AM.jpeg" alt="Image 3">
+            <img class="slider-image" src="images/Cultural/WhatsApp Image 2023-05-24 at 1.34.12 AM.jpeg" alt="Image 4">
+            <div class="slider-navigation">
+                <button class="active" onclick="showImage('cultural', 1)">1</button>
+                <button onclick="showImage('cultural', 2)">2</button>
+                <button onclick="showImage('cultural', 3)">3</button>
+                <button onclick="showImage('cultural', 4)">4</button>
+            </div>
+        </div>
+        <a class="cultural1" href="Cultural.html" class="cultural1">
             <h1>Cultural Events</h1>
         </a>
-    </div> -->
+        
+        <script>
+            //----------------------------- For cultural -----------------------
+            let currentCulturalImage = 1;
+            const showCulturalImage = (imageNumber) => {
+                document.querySelector('.cultural .slider-image.active').classList.remove('active');
+                document.querySelector(`.cultural .slider-image:nth-child(${imageNumber})`).classList.add('active');
+                document.querySelector('.cultural .slider-navigation button.active').classList.remove('active');
+                document.querySelector(`.cultural .slider-navigation button:nth-child(${imageNumber})`).classList.add('active');
+                currentCulturalImage = imageNumber;
+            }
+            setInterval(() => {
+                currentCulturalImage++;
+                if (currentCulturalImage > 4) {
+                    currentCulturalImage = 1;
+                }
+                showCulturalImage(currentCulturalImage);
+            }, 5000);
+        </script>
+        
 
     <script>
         //----------------------------- For sports -----------------------
@@ -115,7 +206,7 @@
 				currentImage = 1;
 			}
 			showImage(currentImage);
-		}, 5000);
+		}, 7000);
 	</script>
 
 </body>

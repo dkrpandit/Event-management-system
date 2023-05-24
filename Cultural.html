@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultural</title>
     <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/Cultural.css">
 </head>
 <body>
+    <a href="https://www.isquareit.edu.in/" target="_blank"> <img class="head12" src="images/i2it.png" alt=""></a>
     <header>
         <nav class="navbar">
             <ul>
@@ -20,23 +22,53 @@
                 <li>
                     <h1 class="nav1">Event management system</h1>
                 </li>
-                <!-- <li>
-                    <a class="login" href="Login.php">Login</a>
-                </li> -->
+                <li>
+                    <a class="login" href="Registration.php">Registration</a>
+                    <!-- <a class="login" href="Login.php">Login</a> -->
+                </li>
             </ul>
         </nav>
     </header>
-    <div class="today">today<br>
-
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quae, corrupti, ex, natus in temporibus repudiandae sequi dicta voluptas cupiditate unde dolorum debitis dolorem eligendi accusamus et ducimus laudantium hic.
+    <h1 class="ddt">Today Date & time </h1>
+    <div class="todayDateTime">
+        <div id="date"></div>
+        <div id="clock"></div>
     </div>
-    <div class="upcoming">upcoming<br>
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sequi ullam aliquam temporibus exercitationem iusto quis cumque facere quia, rem inventore dolorem natus repudiandae dolor, veniam, ratione eius. Eligendi, cumque!
+    <div class="today">
+        <h1 class="today21">Today Events</h1>
+        <ol>
+            <li>
+                <h1 class="Volleyball">1. Singing</h1>
+                <h4 class="Volleyball_1">Singing is the art of using your voice to create beautiful music and convey emotions. It has the power to uplift spirits, touch hearts, and connect people. From improving vocal skills to boosting confidence, singing offers a range of benefits.</h4>
+            </li>
+            <li>
+               <h1 class="Tennis" >2.Mime</h1>
+                   <h4 class="Tennis1">Mime is a theatrical technique that uses the body and its movements to convey emotions, actions, and stories without the use of words or spoken language.Mime is a unique form of performance art that relies on non-verbal communication through physical gestures, facial expressions, and body movements.</h4>
+            </li>
+        </ol>
     </div>
-    <div class="past">recent events<br>
-
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, provident adipisci. Sunt, alias esse facilis cupiditate autem dolorem aperiam consectetur quae ipsam animi fuga ad dicta quo qui vel quod.
+    <div class="upcoming">
+        <h1 class="upcoming21" >Upcoming Events</h1>
+        <ol>
+            <li>
+                <h1 class="Dance">1. Dance</h1>
+                <h4 class="Dance1">Where passion meets movement, and beauty takes flight. Feel the rhythm, express your soul, and let your body speak the language of grace. Embrace the enchantment of dance, where every step tells a story and captivates hearts. Lose yourself in the magic of movement and experience the irresistible allure of the dance floor.</h4>
+                <div class="Ddate">15/06/2023</div>
+                <a class="Dbutton" href="dance.php">Join</a>
+                <!-- <button class="Cbutton">Join</button> -->
+            </li>
+            <li>
+               <h1 class="basketball" >2. fashion show</h1>
+                   <h4 class="basketball">Step into a world of style at our fashion show! Witness the hottest trends, stunning designs, and captivating runway moments. Immerse yourself in a whirlwind of fashion-forward looks that will leave you inspired. Join us for an unforgettable evening of glamour, creativity, and elegance. Get ready to elevate your fashion game and indulge in a celebration of style like no other. Don't miss out on this sensational fashion event!</h4>
+                   <div class="Bdate">07/06/2023</div>
+                <a class="Bbutton" href="Basketball.php">Join</a>
+            </li>
+        </ol>
     </div>
+    <div class="recent">
+        <h1 class="recent21">Recent Events</h1>
+        
+    </div>
+<script src="JavaScript/sports.js"></script>
 </body>
 </html>
