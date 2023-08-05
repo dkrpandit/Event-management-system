@@ -14,3 +14,21 @@ The skills I have acquired during this project will undoubtedly serve as a solid
 
 With enthusiasm and dedication, I look forward to creating even better projects in the future.
 My commitment to continuous growth and improvement in web development remains unwavering. I am excited to embrace new challenges and push the boundaries of what I can achieve.
+
+## Screenshots
+
+1. Home Page
+
+ ![Screenshot from 2023-08-05 22-42-14](https://github.com/dkrpandit/Event-management-system/assets/99905700/f3ae6d72-5ab7-4c7a-8ea5-0cd620015549)
+ 
+3. Registration Form page
+
+![Screenshot from 2023-08-05 22-42-53](https://github.com/dkrpandit/Event-management-system/assets/99905700/626e453d-8d4f-454c-8728-59d051117406)
+
+5. Sport Events Page
+
+  ![Screenshot from 2023-08-05 22-43-12](https://github.com/dkrpandit/Event-management-system/assets/99905700/b4c1998d-ac9a-4d18-a2ff-98f5baf3a6da)
+  
+6. Join as Page
+
+![Screenshot from 2023-08-05 22-43-17](https://github.com/dkrpandit/Event-management-system/assets/99905700/6f13784b-432c-469f-9880-8d2bb2c700a8)
